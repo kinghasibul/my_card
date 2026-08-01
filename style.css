@@ -1,0 +1,242 @@
+/* Main Body & Background Layout */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #fff;
+    overflow-y: auto;
+    padding: 40px 10px;
+}
+
+/* Premium iPhone App Smooth Entrance Animation */
+.iphone-entrance {
+    animation: iphoneReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes iphoneReveal {
+    0% {
+        transform: translateY(60px) scale(0.92);
+        opacity: 0;
+        filter: blur(15px);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    }
+}
+
+/* Main Card Container with Premium Soft White Glass Background */
+.card-container {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 35px 25px 20px 25px;
+    border-radius: 32px;
+    text-align: center;
+    width: 340px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; 
+}
+
+.card-container:hover {
+    background: rgba(255, 255, 255, 0.16) !important;
+    border-color: rgba(255, 255, 255, 0.45) !important; 
+    box-shadow: 0 30px 60px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Fixed High-Definition Profile Image Style */
+.profile-img-new {
+    width: 130px; /* Size optimized to keep the image sharp and clear */
+    height: 130px;
+    object-fit: contain; /* Prevents blurriness and respects original photo edges */
+    display: block;
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #ffffff;
+}
+
+.verified-badge { 
+    display: inline-block !important;
+    flex-shrink: 0;
+}
+
+.subtitle { font-size: 15px; color: #e0e0e0; margin-bottom: 25px; }
+
+/* Social Icons Layout */
+.social-icons-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Core Alignment Fix for Vector Icons */
+.icon-btn svg {
+    display: block !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: auto !important;
+    padding: 0 !important;
+}
+
+/* Individual Social Brand Gradients with Fixed Premium Blue for Behance */
+.fb { background: linear-gradient(45deg, #00c6ff, #0072ff); }
+.insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.ln { background: linear-gradient(45deg, #06b6d4, #0b76a6); }
+.be { background: linear-gradient(45deg, #0057ff, #001f5c) !important; } 
+
+/* Fixed Centering Layout Exclusively for the Local Image Asset */
+.be-local-img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: auto !important;
+    padding: 0 !important;
+}
+
+.icon-btn:hover {
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.25);
+    filter: brightness(1.2);
+}
+
+/* Contact Buttons Container */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Base Style for Contact Buttons */
+.link-btn {
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-size: 200% auto;
+    background-position: left center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-position 0.5s ease, box-shadow 0.3s ease;
+}
+
+/* Typography Consistency */
+.link-btn span { 
+    font-weight: 700; 
+    font-size: 15px; 
+    color: #ffffff !important;
+}
+
+.bold-number { 
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: rgba(236, 236, 236, 0.95) !important;
+    margin-top: 3px; 
+    letter-spacing: 0.5px;
+}
+
+.link-btn svg { 
+    display: inline-block !important;
+    flex-shrink: 0;
+    fill: #ffffff !important;
+    transition: transform 0.3s ease;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Contact Buttons Initial State */
+.call-btn { 
+    background-image: linear-gradient(to right, #11998e 0%, #38ef7d 50%, #11998e 100%); 
+    box-shadow: 0 4px 15px rgba(56, 239, 125, 0.15);
+}
+.wa-btn { 
+    background-image: linear-gradient(to right, #00b4db 0%, #0083b0 50%, #00b4db 100%); 
+    box-shadow: 0 4px 15px rgba(0, 180, 219, 0.15);
+}
+.imo-btn { 
+    background-image: linear-gradient(to right, #2980b9 0%, #2c3e50 50%, #2980b9 100%); 
+    box-shadow: 0 4px 15px rgba(41, 128, 185, 0.15);
+}
+.gmail-btn { 
+    background-image: linear-gradient(to right, #eb4d4b 0%, #ff7979 50%, #eb4d4b 100%); 
+    box-shadow: 0 4px 15px rgba(235, 77, 75, 0.15);
+}
+
+/* Gradient Flip Hover Effect Animation State */
+.link-btn:hover { 
+    transform: translateY(-2px);
+    background-position: right center; 
+}
+
+/* Dynamic Glow Shadows on Hover */
+.call-btn:hover { box-shadow: 0 10px 22px rgba(56, 239, 125, 0.35); }
+.wa-btn:hover { box-shadow: 0 10px 22px rgba(0, 180, 219, 0.35); }
+.imo-btn:hover { box-shadow: 0 10px 22px rgba(41, 128, 185, 0.35); }
+.gmail-btn:hover { box-shadow: 0 10px 22px rgba(235, 77, 75, 0.35); }
+
+.link-btn:hover svg {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+/* Footer Tagline & Copyright Styling */
+.footer-section {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+.tagline {
+    font-size: 11px;
+    font-style: italic;
+    color: #e0e0e0;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+.footer-section p span {
+    color: #03c9fa;
+}
