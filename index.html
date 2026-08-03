@@ -50,27 +50,28 @@
                 <img src="img/icon/call button.png" alt="Call Button" class="be-local-icon-link">
                 <div class="btn-text">
                     <span>Call Me</span>
-                    <small class="bold-number">+965 98735323</small>
+                    <!-- <small class="bold-number">+965 98735323</small> -->
                 </div>
             </a>
 
             <!-- WhatsApp -->
-            <a href="whatsapp://send?phone=96565601790" class="link-btn wa-btn">
+            <a href="https://whatsapp.com" target="_blank" class="link-btn wa-btn">
                 <img src="img/icon/whatsapp.png" alt="Whatsapp" class="be-local-icon-link">
                 <div class="btn-text">
                     <span>WhatsApp</span>
-                    <small class="bold-number">+965 65601790</small>
+                    <!-- <small class="bold-number">+965 65601790</small> -->
                 </div>
             </a>
 
             <!-- Imo -->
-            <a href="imo://add_contact?phone=96565601790" class="link-btn imo-btn">
-                <img src="img/icon/imo.png" alt="Imo" class="be-local-icon-link">
+             <button onclick="copyImoNumber()" class="link-btn imo-btn" id="imoButton">
+                <img src="img/icon/imo.png" alt="Imo" class="be-local-icon-link"> 
                 <div class="btn-text">
-                    <span>Imo</span>
-                    <small class="bold-number">+965 65601790</small>
+                    <span id="imoText">Imo</span>
+                    <!-- <small class="bold-number">+965 65601790</small> -->
                 </div>
-            </a>
+            </button>
+
 
             <!-- Gmail -->
             <a href="mailto:kinghasibul@gmail.com" class="link-btn gmail-btn">
@@ -92,6 +93,8 @@
         </div>
     </div>
 
+
+    <script src="script.js"></script>
 </body>
 </html>
 
