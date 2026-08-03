@@ -33,40 +33,41 @@ body {
     }
 }
 
-/* Main Card Container with Premium Soft White Glass Background */
+/* Main Card Container */
 .card-container {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     padding: 35px 25px 20px 25px;
     border-radius: 32px;
     text-align: center;
     width: 340px;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(245, 240, 245, 0.35) !important; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
     transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; 
 }
 
 .card-container:hover {
-    background: rgba(255, 255, 255, 0.16) !important;
-    border-color: rgba(255, 255, 255, 0.45) !important; 
-    box-shadow: 0 30px 60px rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(245, 240, 245, 0.55) !important; 
+    box-shadow: 0 30px 60px rgba(245, 240, 245, 0.08), 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Fixed High-Definition Profile Image Style */
-.profile-img-new {
-    width: 130px; /* Size optimized to keep the image sharp and clear */
-    height: 130px;
-    object-fit: contain; /* Prevents blurriness and respects original photo edges */
+/* Round High-Definition Profile Image Style */
+.profile-img-fixed {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; 
+    border-radius: 50%;
     display: block;
     margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
 }
 
-
 h1 {
-    font-size: 25px;
-    font-weight: 600;
-    margin: 15px 0 5px 0;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 0 5px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,9 +78,15 @@ h1 {
 .verified-badge { 
     display: inline-block !important;
     flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+} 
+.subtitle { 
+    font-size: 14px;
+    font-weight: 600;
+    color: #e0e0e0; 
+    margin-bottom: 25px; 
 }
-
-.subtitle { font-size: 15px; color: #e0e0e0; margin-bottom: 25px; }
 
 /* Social Icons Layout */
 .social-icons-row {
@@ -103,25 +110,16 @@ h1 {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Core Alignment Fix for Vector Icons */
-.icon-btn svg {
-    display: block !important;
-    width: 24px !important;
-    height: 24px !important;
-    margin: auto !important;
-    padding: 0 !important;
-}
-
-/* Individual Social Brand Gradients with Fixed Premium Blue for Behance */
+/* Individual Social Brand Gradients */
 .fb { background: linear-gradient(45deg, #00c6ff, #0072ff); }
 .insta { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
 .ln { background: linear-gradient(45deg, #06b6d4, #0b76a6); }
 .be { background: linear-gradient(45deg, #0057ff, #001f5c) !important; } 
 
 /* Fixed Centering Layout Exclusively for the Local Image Asset */
-.be-local-img {
-    width: 24px !important;
-    height: 24px !important;
+.be-local-icon {
+    width: 30px !important;
+    height: 30px !important;
     object-fit: contain !important;
     display: block !important;
     margin: auto !important;
@@ -141,49 +139,36 @@ h1 {
     gap: 15px;
 }
 
-/* Base Style for Contact Buttons */
+/* Premium Uniform Serialized Alignment (Centered Card, Icons Locked Aligned on Left) */
 .link-btn {
     text-decoration: none;
-    padding: 14px 20px;
+    height: 54px; 
     border-radius: 18px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 65px; 
+    padding-right: 20px;
+    border: 1px solid rgba(245, 240, 245, 0.25) !important; 
     background-size: 200% auto;
     background-position: left center;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-position 0.5s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-position 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* Typography Consistency */
 .link-btn span { 
-    font-weight: 700; 
+    font-weight: 600; 
     font-size: 15px; 
     color: #ffffff !important;
+    line-height: 1; 
 }
-
-.bold-number { 
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    color: rgba(236, 236, 236, 0.95) !important;
-    margin-top: 3px; 
-    letter-spacing: 0.5px;
+.be-local-icon-link {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin-right: 20px !important;
+    padding: 0 !important;
 }
-
-.link-btn svg { 
-    display: inline-block !important;
-    flex-shrink: 0;
-    fill: #ffffff !important;
-    transition: transform 0.3s ease;
-}
-
-.btn-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Contact Buttons Initial State */
+/* Contact Buttons Initial State Gradients */
 .call-btn { 
     background-image: linear-gradient(to right, #11998e 0%, #38ef7d 50%, #11998e 100%); 
     box-shadow: 0 4px 15px rgba(56, 239, 125, 0.15);
@@ -200,11 +185,15 @@ h1 {
     background-image: linear-gradient(to right, #eb4d4b 0%, #ff7979 50%, #eb4d4b 100%); 
     box-shadow: 0 4px 15px rgba(235, 77, 75, 0.15);
 }
-
+.web-btn {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; 
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.3) !important;
+}
 /* Gradient Flip Hover Effect Animation State */
 .link-btn:hover { 
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     background-position: right center; 
+    border-color: rgba(245, 240, 245, 0.6) !important; 
 }
 
 /* Dynamic Glow Shadows on Hover */
@@ -212,10 +201,7 @@ h1 {
 .wa-btn:hover { box-shadow: 0 10px 22px rgba(0, 180, 219, 0.35); }
 .imo-btn:hover { box-shadow: 0 10px 22px rgba(41, 128, 185, 0.35); }
 .gmail-btn:hover { box-shadow: 0 10px 22px rgba(235, 77, 75, 0.35); }
-
-.link-btn:hover svg {
-    transform: scale(1.08) rotate(-3deg);
-}
+.web-btn:hover { box-shadow: 0 10px 24px rgba(118, 75, 162, 0.55) !important; }
 
 /* Footer Tagline & Copyright Styling */
 .footer-section {
@@ -233,7 +219,7 @@ h1 {
 }
 
 .copyright {
-    font-size: 14px;
+    font-size: 13px;
     color: #ffffff;
     margin: 0;
 }
